@@ -1,0 +1,116 @@
+:root {
+  --color-blue: hsl(223, 87%, 63%);
+  --color-pale-blue: hsl(223, 100%, 88%);
+  --color-social-shadow: hsla(223, 100%, 88%, 0.199);
+  --color-light-red: hsl(354, 100%, 66%);
+  --color-gray: hsl(0, 0%, 59%);
+  --color-very-dark-blue: hsl(209, 33%, 12%);
+
+  --font-size: 20px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Libre Franklin", sans-serif;
+}
+
+.ping-coming-soon-page-header {
+  width: 100%;
+  min-height: 100vh;
+  padding: 6rem 10rem;
+  text-align: center;
+}
+
+.ping-logo {
+  width: 100px;
+  margin-bottom: 3rem;
+}
+
+.ping-heading {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: var(--color-gray);
+  margin-bottom: 1rem;
+}
+
+.ping-heading b {
+  color: var(--color-very-dark-blue);
+}
+
+.ping-paragraph {
+  font-size: var(--font-size);
+  font-weight: 400;
+  color: var(--color-very-dark-blue);
+  margin-bottom: 2rem;
+}
+
+.ping-coming-soon-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 6rem;
+}
+
+.ping-input-group {
+  width: 40%;
+}
+
+#ping-mail {
+  width: 100%;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  outline: none;
+  border: 2px solid var(--color-gray);
+}
+
+#ping-mail::placeholder {
+  color: var(--color-gray);
+}
+
+.ping-form-submit-btn {
+  width: 15%;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 1rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: var(--color-blue);
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  box-shadow: 0 5px 10px var(--color-pale-blue);
+}
+
+.ping-dashboard{
+    width: 60%;
+    margin-bottom: 4rem;
+}
+
+.ping-social-icons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.ping-social-icon{
+  width: 40px;
+  height: 40px;
+  color: var(--color-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: .5rem;
+  box-shadow: 0 0 15px var(--color-social-shadow);
+  border-radius: 50%;
+  margin-bottom: 2rem;
+}
+
+.ping-copyright{
+  color: var(--color-very-dark-blue);
+  font-size: .8rem;
+}
