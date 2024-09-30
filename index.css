@@ -2,9 +2,10 @@
   --color-blue: hsl(223, 87%, 63%);
   --color-pale-blue: hsl(223, 100%, 88%);
   --color-social-shadow: hsla(223, 100%, 88%, 0.199);
-  --color-light-red: hsl(354, 100%, 66%);
+  --color-error-red: hsl(354, 100%, 66%);
   --color-gray: hsl(0, 0%, 59%);
   --color-very-dark-blue: hsl(209, 33%, 12%);
+  --color-success-green: rgb(12, 131, 85);
 
   --font-size: 20px;
 }
@@ -48,7 +49,7 @@
 
 .ping-coming-soon-form {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   gap: 1rem;
   margin-bottom: 6rem;
@@ -64,7 +65,16 @@
   border-radius: 50px;
   font-size: 1rem;
   outline: none;
-  border: 2px solid var(--color-gray);
+  margin-bottom: .6rem;
+  border: 1px solid var(--color-gray);
+}
+
+#ping-mail.error{
+  border: 1px solid var(--color-error-red);
+}
+
+#ping-mail.success{
+  border: 1px solid var(--color-success-green);
 }
 
 #ping-mail::placeholder {
@@ -83,34 +93,206 @@
   outline: none;
   border-radius: 50px;
   box-shadow: 0 5px 10px var(--color-pale-blue);
+  margin: 0;
 }
 
-.ping-dashboard{
-    width: 60%;
-    margin-bottom: 4rem;
+.ping-form-submit-btn:hover {
+  opacity: 0.8;
 }
 
-.ping-social-icons{
+.ping-dashboard {
+  width: 60%;
+  margin-bottom: 4rem;
+}
+
+.ping-social-icons {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
 }
 
-.ping-social-icon{
+.ping-social-icon {
   width: 40px;
   height: 40px;
   color: var(--color-blue);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: .5rem;
+  padding: 0.5rem;
   box-shadow: 0 0 15px var(--color-social-shadow);
   border-radius: 50%;
   margin-bottom: 2rem;
+  cursor: pointer;
 }
 
-.ping-copyright{
+.ping-social-icon:hover {
+  background-color: var(--color-blue);
+  color: #fff;
+}
+
+.ping-copyright {
   color: var(--color-very-dark-blue);
-  font-size: .8rem;
+  font-size: 0.8rem;
+}
+
+.ping-message{
+  display: none;
+}
+
+.ping-message.error{
+  font-size: 1rem;
+  color: var(--color-error-red);
+  text-align: left;
+  margin-left: 2rem;
+}
+
+.ping-message.success{
+  font-size: 1rem;
+  color: var(--color-success-green);
+  text-align: left;
+  margin-left: 2rem;
+}
+
+@media (max-width: 1400px) {
+  .ping-coming-soon-page-header {
+    padding: 4rem 8rem;
+  }
+
+  .ping-coming-soon-form {
+    width: 70%;
+    margin: 2rem auto 4rem;
+  }
+
+  .ping-input-group {
+    width: 80%;
+  }
+
+  #ping-mail {
+    width: 100%;
+  }
+
+  .ping-form-submit-btn {
+    width: 20%;
+  }
+
+  .ping-dashboard {
+    width: 80%;
+    margin-bottom: 4rem;
+  }
+
+
+}
+
+@media (max-width: 1200px) {
+  .ping-coming-soon-page-header {
+    padding: 4rem 6rem;
+  }
+
+  .ping-coming-soon-form {
+    width: 80%;
+    margin: 2rem auto 4rem;
+  }
+
+  .ping-input-group {
+    width: 80%;
+  }
+
+  #ping-mail {
+    width: 100%;
+  }
+
+  .ping-form-submit-btn {
+    width: 20%;
+  }
+
+  .ping-dashboard {
+    width: 80%;
+    margin-bottom: 4rem;
+  }
+
+
+}
+
+@media (max-width: 980px) {
+  .ping-coming-soon-page-header {
+    padding: 4rem;
+  }
+
+  .ping-coming-soon-form {
+    width: 95%;
+    margin: 2rem auto 4rem;
+  }
+
+  .ping-input-group {
+    width: 80%;
+  }
+
+  #ping-mail {
+    width: 100%;
+  }
+
+  .ping-form-submit-btn {
+    width: 20%;
+  }
+
+  .ping-dashboard {
+    width: 90%;
+    margin-bottom: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .ping-coming-soon-page-header {
+    padding: 4rem 2rem;
+  }
+
+  .ping-coming-soon-form {
+    width: 100%;
+    margin: 2rem auto 4rem;
+  }
+
+  .ping-input-group {
+    width: 75%;
+  }
+
+  #ping-mail {
+    width: 100%;
+  }
+
+  .ping-form-submit-btn {
+    width: 25%;
+  }
+
+  .ping-dashboard {
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+}
+
+@media (max-width: 550px){
+  .ping-coming-soon-page-header {
+    width: 100%;
+    min-height: 100vh;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+
+  .ping-coming-soon-form{
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .ping-heading{
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+
+  .ping-input-group{
+    width: 100%;
+  }
+
+  .ping-form-submit-btn{
+    width: 100%;
+  }
 }
