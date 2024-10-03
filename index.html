@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
     <link
       rel="icon"
@@ -36,7 +35,7 @@
       <img src="images/logo.svg" alt="ping-logo" class="ping-logo" />
       <h1 class="ping-heading">We are launching <b>soon!</b></h1>
       <p class="ping-paragraph">Subscribe and get notified</p>
-      <form class="ping-coming-soon-form">
+      <form action="#" class="ping-coming-soon-form">
         <field class="ping-input-group">
           <input
             type="email"
@@ -44,7 +43,7 @@
             id="ping-mail"
             placeholder="Your email address"
           />
-          <p class="ping-message">ping-message</p>
+          <p class="ping-message"></p>
         </field>
         <button class="ping-form-submit-btn">Notify Me</button>
       </form>
@@ -65,7 +64,15 @@
         </div>
       </div>
       <p class="ping-copyright">&copy; Copyright Ping. All rights reserved.</p>
+      <div class="ping-form-submit-success">
+        <div class="ping-form-submit-message">
+          <img src="images/check-circle.svg" alt="check-circle" />
+          <h2>Thank You!</h2>
+          <p>Form submit successful!</p>
+        </div>
+      </div>
     </header>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="index.js"></script>
   </body>
 </html>
